@@ -21,14 +21,14 @@
         </nav>
     </header>
 
-    <h2>Color Coordinator</h2>
+    <h1>Color Coordinator</h1>
 
     <p>Enter the grid size and number of colors below to generate your coordinate sheet.</p>
     <p> Rows & Columns (1-26):</p>
     <p> Number of Colors (1-10):</p>
     <button class="generate-button">Generate</button>
 
-    <h1>Color Selection<h1>
+    <h2>Color Selection<h2>
     <select class="color-select">
         <option value="Red"> Red </option>
         <option value="Orange"> Orange </option>
@@ -42,7 +42,7 @@
         <option value="Teal"> Teal </option>
     </select>
 
-    <h2>
+    <h2>Coordinate Grid</h2>
 
 </body>
 </html>
