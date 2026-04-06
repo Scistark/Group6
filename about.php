@@ -9,11 +9,15 @@
 
     <header>
         <nav>
-            <img src = "resources/image.png">
-            <p> Professional Color Coordination Tools </p>
-            <a href="index.php">Home</a>
-            <a href="about.php">About Us</a>
-            <a href="color.php">Color Coordinate</a>
+            <div class = "nav-left">
+                <img src = "resources/image.png">
+                <p> Professional Color Coordination Tools </p>
+            </div>
+            <div class = "nav-right">
+                <a href="index.php">Home</a>
+                <a href="about.php">About Us</a>
+                <a href="color.php">Color Coordinate</a>
+            </div>
         </nav>
     </header>
 
