@@ -24,5 +24,8 @@
     <h1>Color Coordinator</h1>
 
     <p>Enter the grid size and number of colors below to generate your coordinate sheet.</p>
+    <p> Rows & Columns (1-26):</p>
+    <p> Number of Colors (1-10):</p>
+    <p class="generate-button">Generate</p>
 </body>
 </html>
