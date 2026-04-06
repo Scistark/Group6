@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us</title>
-    <link rel="stylesheet" href="about.css"> 
+    <link rel="stylesheet" href="about.css">
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <div class = "nav-left">
-                <img src = "resources/image.png">
-                <p> Professional Color Coordination Tools </p>
+    <header class="nav-wrapper">
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="resources/image.png" class="logo">
+                <p class="tagline">Professional Color Coordination Tools</p>
             </div>
-            <div class = "nav-right">
+
+            <div class="nav-links">
                 <a href="index.php">Home</a>
-                <a href="about.php">About Us</a>
-                <a href="color.php">Color Coordinate</a>
+                <a href="about.php">About</a>
+                <a href="color.php">Color Coordinator</a>
             </div>
         </nav>
     </header>
 
-    <main>
+    <section class="cards">
+        <div class="card">
+            <img src="resources/crab.png">
+            <h2 class="card-name"> Eli Schneckloth </h2>
+            <p class="card-bio">Hello, my name is Eli Schneckloth a 3rd year student at CSU studying computer science with a focus in cyber security.</p>
+        </div>
+        <div class="card"><img src="resources/crab.png"></div>
+        <div class="card"><img src="resources/crab.png"></div>
+        <div class="card"><img src="resources/crab.png"></div>
+    </section>
+
+    <section class="team">
+        <div class="team-bar"></div>
         <h1>Meet the Team</h1>
-
-        <section class="team-member">
-            <h2>Eli Schneckloth</h2>
-            <!-- <img src="./resources/Eli.jpeg" alt="Your Avatar"> -->
-            <p>
-                Hello, my name is Eli Schneckloth a 3rd year student at CSU studying computer science with a focus in cyber security.
-            </p>
-        </section>
-
-
-    </main>
+    </section>
 
 </body>
 </html>

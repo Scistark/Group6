@@ -1,8 +1,124 @@
-body{
-    background-color: #2C2C2C;
+body {
+    margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #2C2C2C;
 }
 
-header{
+.nav-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar {
+    display: inline-flex;
+    align-items: center;
+
     background-color: white;
+    padding: 0 1rem;
+
+    border-radius: 100px;
+    margin: 1.25rem;
+
+    gap: 1.875rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+}
+
+.tagline {
+    padding: 0.3125rem 0.625rem;
+
+    border: solid black 2px;
+    border-radius: 100px;
+    color: black;
+
+    font-weight: bold;
+    font-size: 26;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.25rem;
+    margin-left: 1.875rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    background-color: #bfbfbf;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5625rem;
+    padding: 1.25rem;
+}
+
+.card {
+    width: 312px;
+    height: 426px;
+
+    background-color: #3A506B;
+    border-radius: 0.625rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0.75rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-name {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+    color: white;
+}
+
+.card-bio {
+    font-size: 0.75rem;
+    text-align: center;
+    color: #dcdcdc;
+}
+
+.team {
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+.team-bar {
+    width: 550px;
+    height: 150px;
+    background-color: #23708A;
+
+    position: absolute;
+}
+
+.team h1 {
+    font-size: 101px;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 3rem;
+    padding-top: 80px;
+    position: relative;
+    color: white;
 }
