@@ -26,6 +26,13 @@
             </p>
         </section>
 
+        <section class="team-member">
+            <h2>Gideon Rank</h2>
+            <img src="./resources/Gideon.png" alt="Your Avatar">
+            <p>
+                I'm Gideon Rank, a 2nd-year computer science student at CSU. I work in UI design with the Sustain lab at CSU, and I love finding ways to make apps more intuitive to use.
+            </p>
+        </section>
 
     </main>
 
