@@ -29,7 +29,10 @@
             <h2 class="card-name"> Eli Schneckloth </h2>
             <p class="card-bio">Hello, my name is Eli Schneckloth a 3rd year student at CSU studying computer science with a focus in cyber security.</p>
         </div>
-        <div class="card"><img src="resources/crab.png"></div>
+        <div class="card"><img src="resources/crab.png">
+            <h2 class="card-name"> Nikolas Augustini </h2>
+            <p class="card-bio">Hello! I am a third year CS student at CSU. Majority of my projects focus on web design and bringing accesibility to different platforms.</p>
+        </div>
         <div class="card"><img src="resources/crab.png"></div>
         <div class="card"><img src="resources/crab.png"></div>
     </section>

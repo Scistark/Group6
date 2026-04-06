@@ -18,6 +18,7 @@ body {
 
     border-radius: 100px;
     margin: 1.25rem;
+    margin-bottom: 4rem;
 
     gap: 1.875rem;
 }
@@ -46,7 +47,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 1.25rem;
+    gap: 3rem;
     margin-left: 1.875rem;
 }
 
@@ -73,29 +74,32 @@ body {
     height: 426px;
 
     background-color: #3A506B;
-    border-radius: 0.625rem;
+    border-radius: 1rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 
-    padding: 0.75rem;
+    padding: 0rem 2rem 2rem 2rem;
+    margin-right: 2rem;
 }
 
 .card img {
     width: 100%;
     height: auto;
+    
+    margin-top:-50px;
 }
 
 .card-name {
-    font-size: 0.9rem;
+    font-size: 2rem;
     margin: 0.25rem 0;
     color: white;
 }
 
 .card-bio {
-    font-size: 0.75rem;
+    font-size: 1rem;
     text-align: center;
     color: #dcdcdc;
 }
