@@ -33,7 +33,11 @@
             <h2 class="card-name"> Nikolas Augustini </h2>
             <p class="card-bio">Hello! I am a third year CS student at CSU. Majority of my projects focus on web design and bringing accesibility to different platforms.</p>
         </div>
-        <div class="card"><img src="resources/crab.png"></div>
+        <div class="card"><img src="resources/crab.png">
+            <h2 class="card-name"> Gideon Rank </h2>
+            <p class="card-bio"> I'm Gideon Rank, a 2nd-year computer science student at CSU. I work in UI design with the Sustain lab at CSU, and I love finding ways to make apps more intuitive to use.
+            </p>
+        </div>
         <div class="card"><img src="resources/crab.png"></div>
     </section>
 
