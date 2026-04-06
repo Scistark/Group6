@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2C2C2C;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar {
+    display: inline-flex;
+    align-items: center;
+
+    background-color: white;
+    padding: 0 1rem;
+
+    border-radius: 100px;
+    margin: 1.25rem;
+    margin-bottom: 4rem;
+
+    gap: 1.875rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.logo {
+    width: 5.625rem;
+    height: auto;
+}
+
+.tagline {
+    padding: 0.3125rem 0.625rem;
+
+    border: solid black 0.125rem;
+    border-radius: 100px;
+    color: black;
+
+    font-weight: bold;
+    font-size: 26;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    margin-left: 1.875rem;
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    background-color: #bfbfbf;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5625rem;
+    padding: 1.25rem;
+}
+
+.card {
+    width: 19.5rem;
+    height: 26.625rem;
+
+    background-color: #3A506B;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0rem 2rem 2rem 2rem;
+    margin-right: 2rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    
+    margin-top:-2.5rem;
+}
+
+.card-name {
+    font-size: 2rem;
+    margin: 0.25rem 0;
+    color: white;
+}
+
+.card-bio {
+    font-size: 1rem;
+    text-align: center;
+    color: #dcdcdc;
+}
+
+.team {
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+.team-bar {
+    width: 34.375rem;
+    height: 9.375rem;
+    background-color: #23708A;
+
+    position: absolute;
+}
+
+.team h1 {
+    font-size: 6.313rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 3rem;
+    padding-top: 5rem;
+    position: relative;
+    color: white;
+}
