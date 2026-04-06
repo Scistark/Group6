@@ -16,7 +16,7 @@
     </header>
 
     <main>
-        <h1>About Our Team</h1>
+        <h1>Meet the Team</h1>
 
         <section class="team-member">
             <h2>Eli Schneckloth</h2>
