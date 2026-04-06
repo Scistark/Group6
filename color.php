@@ -22,5 +22,7 @@
     </header>
 
     <h1>Color Coordinator</h1>
+
+    <p>Enter the grid size and number of colors below to generate your coordinate sheet.</p>
 </body>
 </html>
