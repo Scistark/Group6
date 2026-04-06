@@ -26,6 +26,10 @@
     <p>Enter the grid size and number of colors below to generate your coordinate sheet.</p>
     <p> Rows & Columns (1-26):</p>
     <p> Number of Colors (1-10):</p>
-    <p class="generate-button">Generate</p>
+    <button class="generate-button">Generate</button>
+
+    <h1>Color Selection<h1>
+    
+
 </body>
 </html>
