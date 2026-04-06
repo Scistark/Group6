@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Color Coordinator</title>
-    <link rel="stylesheet" href="color.css"> 
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="color.css">
 </head>
 <body>
     
     <?php include 'fragments/header.php'; ?>
 
-    <h1>Color Coordinator</h1>
+    <section class="color-title">
+        <div class="color-title-bar"></div>
+        <h1>Color Coordinator</h1>
+    </section>
 
+    <div class="color-panel">
+    <h2>Grid Sizing</h2>
     <form method="POST" action="color.php">
         <label> Rows & Columns (1-26):</label>
         <input type="number" name="rows">
@@ -36,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "error colors must be between 1 and 10";
     }
     if (!empty($errors)) {
-        echo "<div style='color: red; font-weight: bold;'>";
+        echo "<div class='error-message'>";
         foreach ($errors as $msg) {
             echo "<p>$msg</p>";
         }
@@ -52,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
     <br>
     <button> View Printable Version </button>
+        </div>
 
 </body>
 </html>
