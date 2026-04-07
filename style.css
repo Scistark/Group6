@@ -1,76 +1,74 @@
 body {
-    background-color: #303030;
-    color: #000080;
-    font-family: monospace, sans-serif;
     margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #2C2C2C;
 }
 
-header {
-    background-color: #ffffff;
-    color: #5bbfbd;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 3px solid #000080;
+.nav-wrapper {
+    display: flex;
+    justify-content: flex-start;
 }
 
-nav a {
-    color: #232b44; 
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 15px;
+.navbar {
+    display: inline-flex;
+    align-items: center;
+
+    background-color: white;
+    padding: 0 1rem;
+
+    border-radius: 100px;
+    margin: 1.25rem;
+    margin-bottom: 4rem;
+
+    gap: 1.875rem;
 }
 
-
-
-.team-member {
-    border: 2px solid #000080;
-    background-color: #ffffff;
-    padding: 15px;
-    margin-bottom: 15px;
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
 }
 
-.team-member img {
-    max-width: 150px;
+.logo {
+    width: 5.625rem;
     height: auto;
-    display: block;
-    margin-bottom: 10px;
-}
-/* ==========================================
-   TOP TABLE: COLOR LIST
-========================================== */
-.color-table {
-    width: 90%; /* Spans most of the width of the page */
-    border-collapse: collapse; /* Merges the double lines into a single spreadsheet line */
-    margin-bottom: 30px;
 }
 
-.color-table td {
-    border: 1px solid #000080; /* Using your dark blue color to maintain your palette */
-    padding: 10px;
+.tagline {
+    padding: 0.3125rem 0.625rem;
+
+    border: solid black 0.125rem;
+    border-radius: 100px;
+    color: black;
+
+    font-weight: bold;
+    font-size: 26;
 }
 
-/* Left column is 20% width, right column is 80% */
-.color-table td:first-child {
-    width: 20%;
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    margin-left: 1.875rem;
+    margin-right: 1rem;
 }
 
-.color-table td:last-child {
-    width: 80%;
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* ==========================================
-   BOTTOM TABLE: COORDINATE GRID
-========================================== */
-.grid-table {
-    border-collapse: collapse;
+.nav-links a:hover {
+    background-color: #bfbfbf;
 }
 
-/* All cells must be square with equal height and width */
-.grid-table td, .grid-table th {
-    border: 1px solid #000080;
-    width: 50px; 
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
+.welcome h1 {
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 3rem;
+    padding-top: 5rem;
+    position: relative;
+    color: white;
 }

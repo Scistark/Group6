@@ -38,7 +38,11 @@
             <p class="card-bio"> I'm Gideon Rank, a 2nd-year computer science student at CSU. I work in UI design with the Sustain lab at CSU, and I love finding ways to make apps more intuitive to use.
             </p>
         </div>
-        <div class="card"><img src="resources/crab.png"></div>
+        <div class="card"><img src="resources/crab.png">
+        <h2 class="card-name"> Alexander Richmond </h2>
+            <p class="card-bio"> Hello everyone! My name is Alexander Richmond, and I'm a third year CS student here at CSU. I like web design, though I've been drifting more towards pre-med.
+            </p>
+        </div>
     </section>
 
     <section class="team">
