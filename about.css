@@ -37,9 +37,9 @@ body {
 .tagline {
     padding: 0.3125rem 0.625rem;
 
-    background-color: #fb6767;
+    border: 1px solid black;
     border-radius: 100px;
-    color: white;
+    color: black;
 
     font-weight: bold;
     font-size: 26;

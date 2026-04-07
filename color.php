@@ -36,10 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num_colors = intval($_POST['colors']);
     $errors = [];
     if ($rows < 1 || $rows > 26) {
-        $errors[] = "error row/colums must be between 1 and 26";
+        $errors[] = "Error: row/colums must be between 1 and 26";
     }
     if ($num_colors < 1 || $num_colors > 10) {
-        $errors[] = "error colors must be between 1 and 10";
+        $errors[] = "Error: colors must be between 1 and 10";
     }
     if (!empty($errors)) {
         echo "<div class='error-message'>";
