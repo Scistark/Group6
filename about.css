@@ -18,7 +18,7 @@ body {
 
     border-radius: 100px;
     margin: 1.25rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     gap: 1.875rem;
 }
@@ -37,7 +37,7 @@ body {
 .tagline {
     padding: 0.3125rem 0.625rem;
 
-    border: solid black 0.125rem;
+    border: 1px solid black;
     border-radius: 100px;
     color: black;
 

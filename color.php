@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Color Coordinator</title>
-    <link rel="stylesheet" href="color.css"> 
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="color.css">
 </head>
 <body>
-     <header class="nav-wrapper">
-        <nav class="navbar">
-            <div class="nav-left">
-                <img src="resources/image.png" class="logo">
-                <p class="tagline">Professional Color Coordination Tools</p>
-            </div>
+    
+    <?php include 'fragments/header.php'; ?>
 
-            <div class="nav-links">
-                <a href="index.php">Home</a>
-                <a href="about.php">About</a>
-                <a href="color.php">Color Coordinator</a>
-            </div>
-        </nav>
-    </header>
+    <section class="color-title">
+        <div class="color-title-bar"></div>
+        <h1>Color Coordinator</h1>
+    </section>
 
-    <h1>Color Coordinator</h1>
-
+    <div class="color-panel">
+    <h2>Grid Sizing</h2>
     <form method="POST" action="color.php">
         <label> Rows & Columns (1-26):</label>
         <input type="number" name="rows">
@@ -42,13 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num_colors = intval($_POST['colors']);
     $errors = [];
     if ($rows < 1 || $rows > 26) {
-        $errors[] = "error row/colums must be between 1 and 26";
+        $errors[] = "Error: row/colums must be between 1 and 26";
     }
     if ($num_colors < 1 || $num_colors > 10) {
-        $errors[] = "error colors must be between 1 and 10";
+        $errors[] = "Error: colors must be between 1 and 10";
     }
     if (!empty($errors)) {
-        echo "<div style='color: red; font-weight: bold;'>";
+        echo "<div class='error-message'>";
         foreach ($errors as $msg) {
             echo "<p>$msg</p>";
         }
@@ -56,55 +50,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else{
     $color_options = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "Brown", "Black", "Teal"];
 
-    echo "<h2>Color Selection</h2>";
-    
-    echo "<table class='color-table'>";
-    for ($i = 0; $i < $num_colors; $i++) {
-        echo "<tr>";
-        
-        //dropdown
-        echo "<td>";
-        echo "<select>";
-        foreach ($color_options as $index => $name) {
-            $selected = ($i == $index) ? "selected" : "";
-            echo "<option value='$name' $selected>$name</option>";
-        }
-        //leftt block
-        echo "</select>";
-        echo "</td>";
-        
-        //right block
-        echo "<td></td>";
-        echo "</tr>";
-    }
-    echo "</table>";
+    include 'fragments/colorSelection.php';
 
-    echo "<h2>Coordinate Grid</h2>";
-
-    echo "<table class='grid-table'>";
-    for ($r = 0; $r <= $rows; $r++) {
-        echo "<tr>";
-        for ($c = 0; $c <= $rows; $c++) {
-            
-            if ($r == 0 && $c == 0) {
-                echo "<th></th>";
-            } elseif ($r == 0) {
-                echo "<th>" . chr(64 + $c) . "</th>";
-            } elseif ($c == 0) {
-                echo "<th>$r</th>";
-            } else {
-                echo "<td></td>";
-            }
-            
-        }
-        echo "</tr>";
-    }
-    echo "</table>";
+    include 'fragments/coordinateGrid.php';
 }
 }
 ?>
-
+    <br>
     <button> View Printable Version </button>
+        </div>
 
 </body>
 </html>

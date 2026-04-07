@@ -1,4 +1,32 @@
 
+.color-title-bar {
+    width: 17.1875rem;
+    height: 4.6875rem;
+    background-color: #23708A;
+
+    position: absolute;
+}
+
+.color-title h1 {
+    font-size: 3.15rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    padding-top: 2.5rem;
+    position: relative;
+    color: white;
+}
+
+.color-panel {
+    display: inline-block;
+    background-color: white;
+    border-radius: 1.5rem;
+    margin: 0 1rem 2rem;
+    padding: 1.5rem 2rem 2rem;
+    box-sizing: border-box;
+    max-width: calc(100% - 1rem);
+}
+
 .color-table {
     border-collapse: collapse;
     margin-bottom: 30px;
@@ -28,6 +56,17 @@
     text-align: center;
     vertical-align: middle;
 }
+
+.error-message {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d93025;
+    border-radius: 0.75rem;
+    background-color: #fdecea;
+    color: #8b0000;
+    font-weight: bold;
+}
+
 .error-message p {
-    margin: 5px 0;
+    margin: 0.25rem 0;
 }
