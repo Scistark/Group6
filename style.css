@@ -4,7 +4,7 @@ body {
     background-color: #2C2C2C;
 
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .nav-wrapper {
@@ -67,11 +67,11 @@ body {
 }
 
 .welcome h1 {
-    font-size: 10rem;
+    font-size: 6rem;
     font-style: italic;
     font-weight: bold;
     margin-left: 3rem;
-    padding-top: 8rem;
+    padding-top: 0rem;
     position: relative;
     color: white;
     top: 300px;
@@ -86,7 +86,7 @@ body {
     border-radius: 100px;
     margin-bottom: 4rem;
     margin-left: 2rem;
-    margin-top:17rem;
+    margin-top:0rem;
     position: absolute;
     top: 800px;
 
