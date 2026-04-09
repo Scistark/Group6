@@ -29,6 +29,8 @@
         <div class="triangle-grey"></div>
         <div class="rectangle-nav"></div>
         <div class="rectangle-side"></div>
+        <div class="bar-left"></div>
+        <div class="bar-right"></div>
     </main>
     <nav class="navbar2">
      <div class="nav-link">   
