@@ -190,11 +190,40 @@ body {
     position: absolute;
     z-index: -1;
     transform: rotate(210deg);
-    right:-200px;
-    top:300px;
+    right:-250px;
+    top:250px;
 
     width: 50rem;
-    height: 20rem;
+    height: 15rem;
     box-sizing: border-box;
     background-color: #5BC0BE;
+}
+
+.bar-left{
+    position: absolute;
+    z-index: -1;
+    transform: rotate(230deg);
+    right:-200px;
+    bottom:-10px;
+
+    width: 55rem;
+    height: 16rem;
+    box-sizing: border-box;
+    background-color: #3A506B;
+    border-radius:200px;
+}
+
+
+.bar-right{
+    position: absolute;
+    z-index: -1;
+    transform: rotate(140deg);
+    right:-200px;
+    bottom:-10px;
+
+    width: 55rem;
+    height: 16rem;
+    box-sizing: border-box;
+    background-color: #3A506B;
+    border-radius:200px;
 }
