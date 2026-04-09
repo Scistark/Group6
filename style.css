@@ -185,3 +185,16 @@ body {
     background-color: #5BC0BE;
 
 }
+
+.rectangle-side{
+    position: absolute;
+    z-index: -1;
+    transform: rotate(210deg);
+    right:-200px;
+    top:300px;
+
+    width: 50rem;
+    height: 20rem;
+    box-sizing: border-box;
+    background-color: #5BC0BE;
+}
