@@ -26,5 +26,10 @@
         <h1 > Planning color scheme with ultimate precision </h1>
         </div>
     </main>
+    <nav class="navbar2">
+     <div class="nav-link">   
+        <a href="color.php">Try Color Coordinator</a>
+     </div>
+    </nav>
 </body>
 </html>

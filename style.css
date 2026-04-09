@@ -68,7 +68,39 @@ body {
     font-style: italic;
     font-weight: bold;
     margin-left: 3rem;
-    padding-top: 5rem;
+    padding-top: 2rem;
     position: relative;
     color: white;
+    top: 300px;
+}
+.navbar2 {
+    display: inline-flex;
+    align-items: center;
+    
+    background-color: #286F89;
+    padding: 2rem 0.5rem;
+
+    border-radius: 100px;
+    margin: 1.25rem;
+    margin-bottom: 4rem;
+    position: absolute;
+    top: 800px;
+
+    gap: 1.875rem;
+}
+.nav-link {
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color:  white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link a:hover {
+    background-color: #bfbfbf;
 }
