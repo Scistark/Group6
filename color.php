@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Color Coordinator</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="color.css">
 </head>

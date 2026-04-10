@@ -1,67 +1,9 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #2C2C2C;
-}
-
-.nav-wrapper {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.navbar {
-    display: inline-flex;
-    align-items: center;
-
-    background-color: white;
-    padding: 0 1rem;
-
-    border-radius: 100px;
-    margin: 1.25rem;
-    margin-bottom: 2rem;
-
-    gap: 1.875rem;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-}
-
-.logo {
-    width: 5.625rem;
-    height: auto;
-}
-
-.tagline {
-    padding: 0.3125rem 0.625rem;
-
-    border: 1px solid black;
-    border-radius: 100px;
-    color: black;
-
-    font-weight: bold;
-    font-size: 26;
-}
-
-.nav-links {
-    display: flex;
-    gap: 3rem;
-    margin-left: 1.875rem;
-    margin-right: 1rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    background-color: #bfbfbf;
-}
+/*
+    Text Contrasts (Foreground/Background):
+    #FFFFFF / #3A506B: 8.26:1
+    #FFFFFF / #2C2C2C: 13.96:1
+    #000000 / #FFFFFF: 21:1
+*/
 
 .cards {
     display: flex;
@@ -87,10 +29,12 @@ body {
 }
 
 .card img {
-    width: 100%;
+    width: 70%;
     height: auto;
     
-    margin-top:-2.5rem;
+    margin-top:2.5rem;
+    margin-bottom:1.5rem;
+    border-radius: 50%;
 }
 
 .card-name {
@@ -113,7 +57,7 @@ body {
 .team-bar {
     width: 34.375rem;
     height: 9.375rem;
-    background-color: #23708A;
+    background-color: #3A506B;
 
     position: absolute;
 }

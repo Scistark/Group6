@@ -1,8 +1,15 @@
+/*
+    Text Contrasts (Foreground/Background):
+    #FFFFFF / #3A506B: 8.26:1
+    #FFFFFF / #2C2C2C: 13.96:1
+    #000000 / #FFFFFF: 21:1
+    #8B0000 / #FDECEA: 8.75:1
+*/
 
 .color-title-bar {
     width: 17.1875rem;
     height: 4.6875rem;
-    background-color: #23708A;
+    background-color: #3A506B;
 
     position: absolute;
 }

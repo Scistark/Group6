@@ -1,3 +1,10 @@
+/*
+    Text Contrasts (Foreground/Background):
+    #FFFFFF / #3A506B: 8.26:1
+    #FFFFFF / #2C2C2C: 13.96:1
+    #000000 / #FFFFFF: 21:1
+*/
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -80,7 +87,7 @@ body {
     display: inline-flex;
     align-items: center;
     
-    background-color: #286F89;
+    background-color: #3A506B;
     padding: 2rem 0.5rem;
 
     border-radius: 100px;
@@ -111,7 +118,7 @@ body {
 
 .triangle {
 	position: absolute;
-	background-color: #23708A;
+	background-color: #3A506B;
 	text-align: left;
 
     z-index: -1;
@@ -212,7 +219,7 @@ body {
     width: 55rem;
     height: 16rem;
     box-sizing: border-box;
-    background-color: #3A506B;
+    background-color: #286F89;
     border-radius:200px;
 }
 
@@ -227,7 +234,7 @@ body {
     width: 55rem;
     height: 16rem;
     box-sizing: border-box;
-    background-color: #3A506B;
+    background-color: #286F89;
     border-radius:200px;
 }
 
