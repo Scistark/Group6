@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($num_colors < 1 || $num_colors > 10) {
         $errors[] = "Error: colors must be between 1 and 10";
     }
-    if (!empty($errors)) {
+    if (!empty($errors)) {      
         echo "<div class='error-message'>";
         foreach ($errors as $msg) {
             echo "<p>$msg</p>";
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "</div>";
     } else{
     $color_options = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "Brown", "Black", "Teal"];
-
+$color_hex = ["Red"=>"#FF0000","Orange"=>"#FFA500","Yellow"=>"#FFFF00","Green"=>"#008000","Blue"=>"#0000FF","Purple"=>"#800080","Grey"=>"#808080","Brown"=>"#8B4513","Black"=>"#000000","Teal"=>"#008080"];
     include 'fragments/colorSelection.php';
 
     include 'fragments/coordinateGrid.php';
@@ -64,4 +64,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
 </body>
+<script>
+const hex = <?php echo json_encode($color_hex); ?>;
+const coords = [];
+for (let i = 0; i < <?php echo $num_colors; ?>; i++) {
+    coords[i] = [];
+}
+
+function paint(cell) {
+    let idx = document.querySelector('input[name="active"]:checked').value;
+    let name = document.querySelectorAll('.color-dropdown')[idx].value;
+    let cur = cell.getAttribute('data-coord');
+
+    for (let i = 0; i < coords.length; i++) {
+        let find = coords[i].indexOf(cur);
+        if (find > -1) coords[i].splice(find, 1);
+    }
+
+    coords[idx].push(cur);
+    cell.style.backgroundColor = hex[name];
+    cell.setAttribute('data-owner', idx);
+
+    for (let i = 0; i < coords.length; i++) {
+            coords[i].sort(); 
+            document.getElementById('list-' + i).innerText = coords[i].join(', ');
+        }
+}
+</script>
 </html>
