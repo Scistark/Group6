@@ -1,27 +1,46 @@
 <?php
-echo "<h2>Color Selection</h2><div id='w' style='color:red;height:20px'></div><table class='color-table'>";
+echo "<h2>Color Selection</h2>";
+echo "<div id='w' style='color:red; font-weight:bold;'></div>";
+echo "<table class='color-table'>";
 for ($i = 0; $i < $num_colors; $i++) {
-    echo "<tr><td><select class='color-dropdown'>"; 
+    $checked = ($i == 0) ? "checked" : "";
+    echo "<tr>";
+    echo "<td>";
+    echo "<input type='radio' name='active' value='$i' $checked> ";
+    echo "<select class='color-dropdown' data-idx='$i'>"; 
     foreach ($color_options as $index => $name) {
-        $s = ($i == $index) ? "selected" : "";
-        echo "<option value='$name' $s>$name</option>";
+        $selected = ($i == $index) ? "selected" : "";
+        echo "<option value='$name' $selected>$name</option>";
     }
-    echo "</select></td><td></td></tr>";
+    echo "</select></td>";
+    echo "<td id='list-$i' style='width:200px;'></td>";
+    echo "</tr>";
 }
 echo "</table>";
 ?>
 
 <script>
-const drops = document.querySelectorAll('.color-dropdown'), warn = document.getElementById('w');
+const drops = document.querySelectorAll('.color-dropdown');
+const warn = document.getElementById('w');
+
 drops.forEach(d => {
-    d.addEventListener('focus', () => d.old = d.value);
+    d.old = d.value;
     d.addEventListener('change', () => {
-        if ([...drops].some(o => o !== d && o.value === d.value)) {
+        let dup = false;
+        drops.forEach(o => {
+            if (o !== d && o.value === d.value) dup = true;
+        });
+
+        if (dup) {
             d.value = d.old;
-            warn.textContent = "no duplicate colors";
+            warn.textContent = "Error: No duplicate colors!";
         } else {
-            d.old = d.value;
             warn.textContent = "";
+            let idx = d.getAttribute('data-idx');
+            let c = hex[d.value];
+            let cells = document.querySelectorAll('td[data-owner="' + idx + '"]');
+            cells.forEach(cell => cell.style.backgroundColor = c);
+            d.old = d.value;
         }
     });
 });

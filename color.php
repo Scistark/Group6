@@ -96,12 +96,5 @@ function paint(cell) {
             document.getElementById('list-' + i).innerText = coords[i].join(', ');
         }
 }
-
-function prepPrint() {
-    document.getElementById('coord-data').value = JSON.stringify(coords);
-    let names = [];
-    document.querySelectorAll('.color-dropdown').forEach(d => names.push(d.value));
-    document.getElementById('color-names').value = JSON.stringify(names);
-}
 </script>
 </html>
