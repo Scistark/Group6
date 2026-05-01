@@ -1,8 +1,10 @@
 <?php
 
-$dsn = "mysql:host=helmi;dbname=snowkai;charset=utf8mb4";
-$user = "snowkai";
-$pass = "Sc0ut_G1nger_420";
+$dsn = "mysql:host=helmi;dbname=NETID;charset=utf8mb4";
+$user = "NETID";
+$pass = "PASSWD";
+
+//type in your user and password
 
 try {
     $pdo = new PDO($dsn, $user, $pass, [
