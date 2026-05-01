@@ -30,5 +30,9 @@
         <button type="submit" class="generate-button">Generate</button>
     </form>
 
+    <div class="current-colors">
+
+    </div>
+
 </body>
 </html>
