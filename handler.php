@@ -1,6 +1,6 @@
 <?php
 
-require 'database.php';
+require 'fragments/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = isset($_POST['color_name']) ? trim($_POST['color_name']) : '';

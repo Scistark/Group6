@@ -44,36 +44,9 @@
     padding: 10px;
 }
 
-.color-table td:first-child {
-    width: 20%;
-}
-
-.color-table td:last-child {
-    width: 80%;
-}
-
-.grid-table {
-    border-collapse: collapse;
-}
-
-.grid-table td, .grid-table th {
-    border: 1px solid #000080;
-    width: 50px; 
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.error-message {
-    margin: 1rem 0;
-    padding: 0.75rem 1rem;
-    border: 1px solid #d93025;
-    border-radius: 0.75rem;
-    background-color: #fdecea;
-    color: #8b0000;
-    font-weight: bold;
-}
-
-.error-message p {
-    margin: 0.25rem 0;
+.color-block {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
