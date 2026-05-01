@@ -55,7 +55,13 @@ $color_hex = ["Red"=>"#FF0000","Orange"=>"#FFA500","Yellow"=>"#FFFF00","Green"=>
 
     include 'fragments/coordinateGrid.php';
 
-    echo "<br><a href='print.php?rows=$rows&colors=$num_colors'><button type='button'>View Printable Version</button></a>";
+    echo "<br><form method='POST' action='print.php' target='_blank'>";
+    echo "<input type='hidden' name='rows' value='$rows'>";
+    echo "<input type='hidden' name='colors' value='$num_colors'>";
+    echo "<input type='hidden' name='coord_data' id='coord-data' value=''>";
+    echo "<input type='hidden' name='color_names' id='color-names' value=''>";
+    echo "<button type='submit' onclick='prepPrint()'>View Printable Version</button>";
+    echo "</form>";
 
 }
 }
@@ -89,6 +95,13 @@ function paint(cell) {
             coords[i].sort(); 
             document.getElementById('list-' + i).innerText = coords[i].join(', ');
         }
+}
+
+function prepPrint() {
+    document.getElementById('coord-data').value = JSON.stringify(coords);
+    let names = [];
+    document.querySelectorAll('.color-dropdown').forEach(d => names.push(d.value));
+    document.getElementById('color-names').value = JSON.stringify(names);
 }
 </script>
 </html>

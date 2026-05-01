@@ -21,17 +21,23 @@
     </header>
 
     <?php
-    if (isset($_GET['rows']) && isset($_GET['colors'])) {
-        $rows = intval($_GET['rows']);
-        $num_colors = intval($_GET['colors']);
-        $color_options = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "Brown", "Black", "Teal"];
+    if (isset($_POST['rows']) && isset($_POST['colors'])) {
+        $rows = intval($_POST['rows']);
+        $num_colors = intval($_POST['colors']);
+        $color_hex = ["Red"=>"#FF0000","Orange"=>"#FFA500","Yellow"=>"#FFFF00","Green"=>"#008000","Blue"=>"#0000FF","Purple"=>"#800080","Grey"=>"#808080","Brown"=>"#8B4513","Black"=>"#000000","Teal"=>"#008080"];
+
+        $coord_data = isset($_POST['coord_data']) ? json_decode($_POST['coord_data'], true) : [];
+        $color_names = isset($_POST['color_names']) ? json_decode($_POST['color_names'], true) : [];
 
         echo "<h2>Color Selection</h2>";
         echo "<table class='color-table'>";
         for ($i = 0; $i < $num_colors; $i++) {
+            $name = isset($color_names[$i]) ? $color_names[$i] : "Color " . ($i + 1);
+            $hex = isset($color_hex[$name]) ? $color_hex[$name] : "";
+            $coords = (isset($coord_data[$i]) && is_array($coord_data[$i])) ? implode(", ", $coord_data[$i]) : "";
             echo "<tr>";
-            echo "<td style='width: 20%; font-weight: bold;'>" . $color_options[$i] . "</td>";
-            echo "<td style='width: 80%;'></td>"; 
+            echo "<td style='width: 20%; font-weight: bold;'>" . htmlspecialchars($name) . " &mdash; " . $hex . "</td>";
+            echo "<td style='width: 80%;'>$coords</td>"; 
             echo "</tr>";
         }
         echo "</table>";
