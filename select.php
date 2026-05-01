@@ -27,10 +27,12 @@
         <input type="number" name="colors">
         <br>
 
-        <button type="submit" class="generate-button">Generate</button>
+        <button type="submit" class="generate-button">Add</button>
     </form>
 
     <div class="current-colors">
+        
+    <h2>Current Colors</h2>
 
     </div>
 
