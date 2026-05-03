@@ -1,0 +1,52 @@
+/*
+    Text Contrasts (Foreground/Background):
+    #FFFFFF / #3A506B: 8.26:1
+    #FFFFFF / #2C2C2C: 13.96:1
+    #000000 / #FFFFFF: 21:1
+    #8B0000 / #FDECEA: 8.75:1
+*/
+
+.color-title-bar {
+    width: 17.1875rem;
+    height: 4.6875rem;
+    background-color: #3A506B;
+
+    position: absolute;
+}
+
+.color-title h1 {
+    font-size: 3.15rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    padding-top: 2.5rem;
+    position: relative;
+    color: white;
+}
+
+.add-panel {
+    display: inline-block;
+    background-color: white;
+    border-radius: 1.5rem;
+    margin: 0 1rem 2rem;
+    padding: 1.5rem 2rem 2rem;
+    box-sizing: border-box;
+    max-width: calc(100% - 1rem);
+}
+
+.color-table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.color-table td {
+    border: 1px solid #000080;
+    padding: 10px;
+}
+
+.color-block {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
