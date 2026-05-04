@@ -17,11 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ]);
         } catch (PDOException $e) {
             header("Location: colors.php?error=That+name+or+hex+value+already+exists");
-            exit;
+            
         }
     } else {
             header("Location: colors.php?error=Invalid+name+or+hex+value");
-            exit;
             
     }
     
@@ -43,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
             header("Location: colors.php?error=Invalid+name+or+hex+value");
-            exit;
+            
     }
     header("Location: colors.php");
     exit;
@@ -52,10 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $count = $pdo->query("SELECT COUNT(*) FROM colors")->fetchColumn();
     if ($count <= 2) {
             header("Location: colors.php?error=Cannot+delete%3A+must+keep+at+least+2+colors");
-            exit;
+            
         } else {
             header("Location: colors.php?delete_id=" . $id);
-            exit;
+            
         }
     }  else if ($action === 'delete_confirm') {
         $id = intval($_POST['color_id']);
