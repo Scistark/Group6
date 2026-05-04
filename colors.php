@@ -22,7 +22,7 @@ if (isset($_GET['delete_id'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Color Selector</title>
+    <title>Color Selection</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="colors.css">
@@ -33,7 +33,7 @@ if (isset($_GET['delete_id'])) {
 
     <section class="color-title">
         <div class="color-title-bar"></div>
-        <h1>Color Selector</h1>
+        <h1>Color Selection</h1>
     </section>
 
     <div class="add-panel">
