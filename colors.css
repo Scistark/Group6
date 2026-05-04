@@ -50,3 +50,16 @@
     border-radius: 4px;
     border: 1px solid #ccc;
 }
+.error-message {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d93025;
+    border-radius: 0.75rem;
+    background-color: #fdecea;
+    color: #8b0000;
+    font-weight: bold;
+}
+
+.error-message p {
+    margin: 0.25rem 0;
+}

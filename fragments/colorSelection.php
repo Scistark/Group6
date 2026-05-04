@@ -8,9 +8,11 @@ for ($i = 0; $i < $num_colors; $i++) {
     echo "<td>";
     echo "<input type='radio' name='active' value='$i' $checked> ";
     echo "<select class='color-dropdown' data-idx='$i'>"; 
-    foreach ($color_options as $index => $name) {
+    foreach ($colors as $index => $color) {
         $selected = ($i == $index) ? "selected" : "";
-        echo "<option value='$name' $selected>$name</option>";
+        $name = htmlspecialchars($color['name']);
+        $hexval = htmlspecialchars($color['hex_value']);
+        echo "<option value='$name' data-hex='$hexval' $selected>$name</option>";
     }
     echo "</select></td>";
     echo "<td id='list-$i' style='width:200px;'></td>";

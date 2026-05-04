@@ -1,3 +1,31 @@
+<?php
+require 'db.php';
+$stmt = $pdo->query("SELECT name, hex_value FROM colors ORDER BY id ASC");
+$colors = $stmt->fetchAll();
+$max_colors  = count($colors);
+
+$color_hex = [];
+foreach ($colors as $row) {
+    $color_hex[$row['name']] = $row['hex_value'];
+}
+
+$num_colors = 0;
+$errors = [];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $rows = intval($_POST['rows']);
+    $num_colors = intval($_POST['colors']);
+    
+    if ($rows < 1 || $rows > 26) {
+        $errors[] = "Error: row/colums must be between 1 and 26";
+    }
+    if ($num_colors < 1 || $num_colors > $max_colors) {
+        $errors[] = "Error: colors must be between 1 and $max_colors";
+    }
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,25 +51,14 @@
         <input type="number" name="rows">
         <br>
 
-        <label> Number of Colors (1-10):</label>
+        <label> Number of Colors (1-<?= $max_colors ?>):</label>
         <input type="number" name="colors">
         <br>
 
         <button type="submit" class="generate-button">Generate</button>
     </form>
-<?php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    $rows = intval($_POST['rows']);
-    $num_colors = intval($_POST['colors']);
-    $errors = [];
-    if ($rows < 1 || $rows > 26) {
-        $errors[] = "Error: row/colums must be between 1 and 26";
-    }
-    if ($num_colors < 1 || $num_colors > 10) {
-        $errors[] = "Error: colors must be between 1 and 10";
-    }
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($errors)) {      
         echo "<div class='error-message'>";
         foreach ($errors as $msg) {
@@ -49,8 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         echo "</div>";
     } else{
-    $color_options = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "Brown", "Black", "Teal"];
-$color_hex = ["Red"=>"#FF0000","Orange"=>"#FFA500","Yellow"=>"#FFFF00","Green"=>"#008000","Blue"=>"#0000FF","Purple"=>"#800080","Grey"=>"#808080","Brown"=>"#8B4513","Black"=>"#000000","Teal"=>"#008080"];
+    
     include 'fragments/colorSelection.php';
 
     include 'fragments/coordinateGrid.php';
@@ -63,9 +79,9 @@ $color_hex = ["Red"=>"#FF0000","Orange"=>"#FFA500","Yellow"=>"#FFFF00","Green"=>
     echo "<button type='submit' onclick='prepPrint()'>View Printable Version</button>";
     echo "</form>";
 
-}
-}
-?>
+    }
+    }
+    ?>
     <br>
         </div>
 

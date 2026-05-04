@@ -1,3 +1,12 @@
+<?php
+require 'db.php';
+$stmt = $pdo->query("SELECT name, hex_value FROM colors ORDER BY id ASC");
+$colors = $stmt->fetchAll();
+$color_hex = [];
+foreach ($colors as $row) {
+    $color_hex[$row['name']] = $row['hex_value'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +33,6 @@
     if (isset($_POST['rows']) && isset($_POST['colors'])) {
         $rows = intval($_POST['rows']);
         $num_colors = intval($_POST['colors']);
-        $color_hex = ["Red"=>"#FF0000","Orange"=>"#FFA500","Yellow"=>"#FFFF00","Green"=>"#008000","Blue"=>"#0000FF","Purple"=>"#800080","Grey"=>"#808080","Brown"=>"#8B4513","Black"=>"#000000","Teal"=>"#008080"];
-
         $coord_data = isset($_POST['coord_data']) ? json_decode($_POST['coord_data'], true) : [];
         $color_names = isset($_POST['color_names']) ? json_decode($_POST['color_names'], true) : [];
 
