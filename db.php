@@ -2,7 +2,7 @@
 
 $dsn = "mysql:host=helmi;dbname=NETID;charset=utf8mb4";
 $user = "NETID";
-$pass = "PASSWD";
+$pass = "password";
 
 //type in your user and password
 

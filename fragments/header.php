@@ -9,7 +9,7 @@
            <a href="index.php">Home</a>
             <a href="about.php">About</a>
             <a href="color.php">Color Coordinator</a>
-            <a href="select.php">Color Selector</a>
+            <a href="colors.php">Color Selector</a>
         </div>
     </nav>
 </header>
