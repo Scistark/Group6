@@ -87,9 +87,10 @@ body {
     display: inline-flex;
     align-items: center;
     
-    background-color: #3A506B;
+    background: linear-gradient(to bottom,#3A506B,#3A506B,#000000);
     padding: 2rem 0.5rem;
 
+    border: solid 4px #3A506B;
     border-radius: 100px;
     margin-bottom: 4rem;
     margin-left: 2rem;

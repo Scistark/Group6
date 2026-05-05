@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </section>
 
     <div class="color-panel">
-    <h2>Grid Sizing</h2>
+    <h2 class="color-heading">Grid Sizing</h2>
     <form method="POST" action="color.php">
         <label> Rows & Columns (1-26):</label>
         <input type="number" name="rows">

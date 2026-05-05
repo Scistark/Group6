@@ -25,7 +25,7 @@ foreach ($colors as $row) {
 <body>
 
     <header>
-        <img src="resources/image.png" alt="Company Logo" style="max-width: 150px;">
+        <img src="resources/image.png" alt="Company Logo" style="max-width: 100px;">
         <h1>Professional Color Coordination Tools</h1>
     </header>
 
@@ -36,6 +36,7 @@ foreach ($colors as $row) {
         $coord_data = isset($_POST['coord_data']) ? json_decode($_POST['coord_data'], true) : [];
         $color_names = isset($_POST['color_names']) ? json_decode($_POST['color_names'], true) : [];
 
+        echo "<div class='print-container'>";
         echo "<h2>Color Selection</h2>";
         echo "<table class='color-table'>";
         for ($i = 0; $i < $num_colors; $i++) {
@@ -67,6 +68,7 @@ foreach ($colors as $row) {
             echo "</tr>";
         }
         echo "</table>";
+        echo "</div>";
     }
     ?>
 

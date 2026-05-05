@@ -8,8 +8,8 @@
 
 .color-title-bar {
     width: 17.1875rem;
-    height: 4.6875rem;
-    background-color: #3A506B;
+    height: 5rem;
+    background: linear-gradient(to bottom,#3A506B,#000000);
 
     position: absolute;
 }
@@ -32,6 +32,14 @@
     padding: 1.5rem 2rem 2rem;
     box-sizing: border-box;
     max-width: calc(100% - 1rem);
+}
+
+.color-panel h2 {
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-bottom: 1;
+    border-radius: 1.5rem;
+    background: linear-gradient(to left, #5BC0BE,#286F89,#3A506B,#3A506B);
 }
 
 .color-table {
@@ -76,4 +84,8 @@
 
 .error-message p {
     margin: 0.25rem 0;
+}
+
+.print-container {
+    max-width: 650px;
 }
